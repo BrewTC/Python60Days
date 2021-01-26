@@ -10,6 +10,7 @@ matmul_array1 = np.matmul(inv_array1, array1)
 print(matmul_array1)
 # [[1. 0.]
 #  [0. 1.]]
+# 是，雖然算出來沒有完全等於[[1,0],[0,1]]，因為反矩陣計算浮點數的關係所以不會完全等於
 
 # 運用上列array計算特徵值、特徵向量?
 eig_array1 = np.linalg.eig(array1)
