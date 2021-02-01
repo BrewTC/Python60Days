@@ -7,11 +7,12 @@ q_df = pd.DataFrame([['male', 'teacher'],
                      ['female', 'engineer']]
                      ,columns=['Sex','Profession'])
 
+# 欄位缺失值填入字串 'others'
 new_q_df = q_df.fillna('others')
 # print(new_q_df)
 
-pf = pd.q_df.get_dummies(q_df['Profession'])
-df = pd.concat([q_df,pf], axis=1)
-print(df)
+pf = pd.get_dummies(q_df['Profession'])
+q_df = pd.concat([q_df,pf], axis=1)
+#print(q_df)
 
-#用一般型的排序方式，因為職業類別是沒有順序的編碼
+#用一般型(one-hot encoding)的排序方式，因為職業類別是沒有順序的編碼
