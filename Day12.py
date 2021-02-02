@@ -6,7 +6,9 @@ import pandas as pd
 import numpy as np
 
 x = pd.read_csv('boston(1).csv')
-print(x.boxplot())
+print(x.boxplot(figsize=(10,8)))
+
+#欄位B
 
 # 畫出散佈圖 x='NOX', y='DIS' ，並說明這兩欄位有什麼關係？
 
