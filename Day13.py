@@ -6,14 +6,14 @@ student_id_score_df = score_df.set_index('student_id')
 print(student_id_score_df)
 
 # 6 號學生(student_id=6) 3 科平均分數為何
-score_df_mean = score_df.mean(axis=1)
-print(score_df_mean.loc[6])
-#50.25
+student_id_score_df = student_id_score_df.mean(axis=1)
+print(student_id_score_df.loc[6])
+#56.333333333333336
 
 # 6 號學生 3 科平均分數是否有贏過班上一半的同學？
-print(score_df_mean.median())
-#46.75
-#50.25 > 46.75 ,有贏過班上一半的學生
+print(student_id_score_df.median())
+#59.833333333333336
+#56.33 < 59.83 ,沒有贏過班上一半的學生
 
 # 由於班上同學成績不好，所以學校統一加分，加分方式為開根號乘以十，請問 6 號同學 3 科成績分別是？
 new_student_id_score_df = student_id_score_df.apply(lambda x : x**(0.5)*10)
