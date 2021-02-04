@@ -6,12 +6,16 @@ score_df = pd.DataFrame([[1,50,80,70,'boy',1],[2,60,45,50,'boy',2],[3,98,43,55,'
 # 找出全年級各科成績最高分與最低分？
 score_df_q1 = score_df.groupby(['class']).agg(['max','min'])
 # print(score_df_q1)
+#math_score       98
+#english_score      90
+#chinese_score      89
 
 
 # 找出數學班平均最高的班級？
 score_df_q2 = score_df.groupby('class')['math_score'].mean().argmax()
 # print(score_df_q2)
 # class1
+# 另一解法，看表格解讀 groupby('class').mean()
 
 # 分析全校女生與男生國文平均差幾分？
 score_df_q3 = score_df.groupby('sex')['chinese_score'].mean().agg(['max','min'])
