@@ -47,5 +47,9 @@ plt.scatter(X,Y, s=75, c=T, alpha=.5)
 
 plt.xlim(-1.5,1.5)
 plt.ylim(-1.5,1.5)
-
+plt.colorbar()  # 添加顏色欄
 plt.show()
+
+# 參考資料:
+# https://www.itread01.com/content/1544486789.html
+# https://kknews.cc/zh-tw/code/kbaypav.html
